@@ -16,8 +16,16 @@ output:
 """
 
 N=110
-
+cnt=0
 for i in range(1,N+1):
     i=11
-    
-    
+    num = list(map(int,list(str(i))))
+    for j in range(len(num)):
+        j=0
+        
+        num[0]
+
+
+    len(i)    
+    99-10+1+9
+10-1
