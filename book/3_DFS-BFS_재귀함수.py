@@ -2,6 +2,9 @@
  - 재귀함수 (Recursive Function)
  - type : DFS/BFS
 
+*1을 넣으면 1,2,...,99까지 실행을 한 후에야 이 출력문이 실행되기 시작. => 스택 자료구조와 동일
+*스택 자료구조를 이용해야할 경우 재귀함수를 많이 씀
+
 """
 
 def recursive_function():
@@ -15,7 +18,6 @@ def recursive_function(i):
         return
     print(i, '번째 재귀 함수에서', i+1, "번째 재귀 함수를 호출합니다.")
     recursive_function(i+1)
-    # 1을 넣으면 1,2,...,99까지 실행을 한 후에야 이 출력문이 실행되기 시작. => 스택 자료구조와 동일
     print(i, "번째 재귀 함수를 종료합니다")  
 
-recursive_function(1) # 
+recursive_function(1) 
