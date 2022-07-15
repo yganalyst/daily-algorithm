@@ -7,7 +7,7 @@
 from collections import deque
 
 def bfs(graph, start, visited):
-    queue = deque([1])
+    queue = deque([start])
     visited[start]=True
     
     while queue:
