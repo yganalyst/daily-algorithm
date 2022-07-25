@@ -17,6 +17,9 @@
 *https://velog.io/@ledcost/%EB%B0%B1%EC%A4%80-1654-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EB%9E%9C%EC%84%A0-%EC%9E%90%EB%A5%B4%EA%B8%B0-%EC%8B%A4%EB%B2%843-%EC%9D%B4%EB%B6%84-%ED%83%90%EC%83%89
 
 """
+# test case
+# 4 11
+# 899,799,499,539
 
 K,N = map(int,input().split())
 ls_=[]
@@ -34,8 +37,10 @@ end = max(ls_)
 while start<=end:
     mid = (start+end)//2
     cut_ = cutting(mid)
+    # print(start,mid,end,cut_)
     if cut_<N:
         end=mid-1
     else:
         start=mid+1
 print(end)
+
