@@ -15,7 +15,7 @@
 *https://honeypot.tistory.com/83
 """
 
-N=3
+N=int(input())
 d=[0]*1001  # case 범위
 d[1]=1 # 1(2x1)
 d[2]=3 # 2(2x1), 2(1x2), 1(2x2)
