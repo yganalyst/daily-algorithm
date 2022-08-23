@@ -87,11 +87,11 @@ while True:
     #    (2) 사과가 있으면 꼬리를 늘림
         graph[next_loc[0]][next_loc[1]]=0
 
-    #    (3) Queue에 이번에 이동한 칸 업데이트
+    # 4. Queue에 이번에 이동한 칸 업데이트
     q.append(next_loc)
     loc=next_loc
         
-    # 4. 이동 후 회전 방향 결정
+    # 5. 이동 후 회전 방향 결정
     if time_steps==x:
         head = change_direction(head,c)
         if dir_info:
