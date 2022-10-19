@@ -7,7 +7,9 @@
     https://school.programmers.co.kr/learn/courses/30/lessons/12906
     
 주의할점
-    스택 큐
+  - 스택,큐와 같은 자료구조 원리를 이용하는 아이디어를 활용
+    - 결과 list의 마지막 값과 비교해서 다를때 추가해주면 됨
+
 *Referece
 
 """
@@ -22,7 +24,7 @@ def solution(arr):
             answer.append(arr[i])
     return answer
 
-# 2. 다른사람 풀이
+# 2. Reference
 def solution(arr):
    answer = []
    for i in arr:
