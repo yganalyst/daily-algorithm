@@ -7,8 +7,9 @@
     https://school.programmers.co.kr/learn/courses/30/lessons/12909
     
 주의할점
+ - 예외케이스를 잘 생각해내고 걸러내는 작업에 집중
  - ())) ((()
- - ( (   )  )  (  ) )      
+ - ( ( (  ) ) 이게 안잡힘
 
 *Referece
 
@@ -30,6 +31,9 @@ def solution(s):
             check_n-=1
         if check_n<0:
             return False
-    return True
+    if check_n==0:
+        return True
+    else:
+        return False
 
 
