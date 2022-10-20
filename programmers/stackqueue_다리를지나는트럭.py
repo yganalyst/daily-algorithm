@@ -27,7 +27,6 @@ https://velog.io/@henrynoowah/PYTHON-Programmers-%EB%8B%A4%EB%A6%AC%EB%A5%BC-%EC
 
 # 1.Reference
 def solution(bridge_length, weight, truck_weights):
-    
     answer = 0
     bridge = [0 for _ in range(bridge_length)]
     while bridge:        
@@ -38,7 +37,6 @@ def solution(bridge_length, weight, truck_weights):
                 bridge.append(t)
             else:
                 bridge.append(0)
-
         answer += 1
     return answer
     
