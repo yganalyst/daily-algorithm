@@ -2,7 +2,7 @@
 20221021
 
 - 가장 큰 수
-- type: 스택/큐
+- type: 정렬
 - Problem : 
     https://school.programmers.co.kr/learn/courses/30/lessons/42746
     
@@ -20,7 +20,6 @@
 https://school.programmers.co.kr/learn/courses/30/lessons/42746/solution_groups?language=python3
 
 """
-ls_ = [979, 97, 978, 81, 818, 817]
 
 # 1. 답안
 def solution(numbers):
