@@ -8,8 +8,16 @@
     https://school.programmers.co.kr/learn/courses/30/lessons/92341  
 
 주의할점
-    딕셔너리 정렬
-    올림하는 방식 (math.ceil로만?)
+    풀긴했으나 while문이 좀 마음에 안듦
+    While문 부분 (IN OUT 시간 계산하는 파트) Refernece 참고
+      - record루프
+        - 차량번호 별로 In, out status를 조건문으로 바로 time계산하기
+        - 그리고 해당 차량번호의 마지막 Status 기록
+      - 마지막 상태가 IN이면 1439분(23:59)에서 뺀 만큼 더 더해줌
+      - 나머지 계산은 그대로
+    *딕셔너리 정렬 까먹었음
+    *올림하는 방식 (math.ceil)
+    
     
 
 *Referece
@@ -39,15 +47,48 @@ def solution(fees, records):
             except:                
                 h_out, m_out = 23,59
             sum_t += h_out*60 + m_out - (h_in*60 + m_in)
-        print(sum_t)
         if sum_t <= fees[0]:
             dict_[i]=fees[1]
         else:          
             dict_[i]=fees[1]+math.ceil((sum_t-fees[0])/fees[2])*fees[3]
         
     dict_sort = sorted(dict_.items(), key=lambda x : x[0])
-    print(int(3.6))
     answer = [i[1] for i in dict_sort]
     return answer
+
+
+# Reference
+import math
+def solution(fees, records):
+    check = {}
+
+    for record in records:
+        time, number, status = record.split()
+        time = time.split(':')
+        time = int(time[0])*60 + int(time[1])
+        if number not in check:
+            check[number] = (0, time, status)
+        if status == 'IN':
+            check[number] = (check[number][0], time, status)
+        elif status == 'OUT':
+            total_time, in_time, _ = check[number]
+            total_time += time - in_time
+            check[number] = (total_time, time, status)
+
+    result = {}
+
+    for number in check.keys():
+        total_time, time, status = check[number]
+        if status == 'IN':
+            total_time += 1439 - time
+        fee = fees[1]
+        if total_time <= fees[0]:
+            result[number] = fee
+        else:
+            fee = fee + math.ceil((total_time - fees[0]) / fees[2]) * fees[-1]
+            result[number] = fee
+
+    return list(map(lambda x : x[1], sorted(result.items())))
+
 
 
