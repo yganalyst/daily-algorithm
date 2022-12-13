@@ -1,7 +1,7 @@
 """
 20221213
 
-- 
+- OddOccurrencesInArray
 - type: Arrays
 - level: Easy
 - Problem : 
