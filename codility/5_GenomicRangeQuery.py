@@ -26,6 +26,7 @@
    
 *Referece
 https://nachwon.github.io/GenomicRangeQuery/
+https://velog.io/@koyo/python-prefix-sum
 
 """
 
