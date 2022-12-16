@@ -3,7 +3,7 @@
 
 - PassingCars
 - type: Prefix Sums
-- level: Medium
+- level: Easy
 - Problem : 
     https://app.codility.com/programmers/lessons/5-prefix_sums/passing_cars/
 
