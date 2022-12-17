@@ -27,6 +27,7 @@ https://sohyunwriter.tistory.com/100
 """
 
 # 1. Reference
+import math
 def solution(N):
     n_sqrt = math.sqrt(N)
     answer=0
@@ -37,6 +38,7 @@ def solution(N):
                 break
             else:
                 answer+=2
+    return answer
 
 # 2. 내 답 - O(sqrt(N)) - 92%
 import math
