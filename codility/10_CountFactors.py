@@ -8,7 +8,8 @@
     https://app.codility.com/programmers/lessons/10-prime_and_composite_numbers/count_factors/
 
 *주의할점
-  - Idea는 같은데, list에 in 연산자로 추가 연산이 필요하게돼서 효율성 1개 case가 실패..
+  - Idea는 같은데, 제곱수 판별 떄문에 효율성 저하
+  - list에 in 연산자로 추가 연산이 필요하게돼서 효율성 1개 case가 실패..
   - 결국 제곱수까지만 확인하되,
     - 약수이면 +2
     - 제곱수면 +1하고 종료

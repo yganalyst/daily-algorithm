@@ -14,7 +14,7 @@
   - 추가로, (0,3)이 distinct하면, 부분집합도 모두 distinct함
   Reference
    - 확장하는 머리부분을 front, 꼬리부분을 back으로 정의
-   - front 먼저 끝까지 넓히고, back을 하나씩 떙겨옴
+   - front 먼저 distinct한 slice까지 넓히고, back을 하나씩 떙겨옴
      *이렇게하면 모든 경우의수 가능 (땡기면서, 중복을 지난 후의 경우를 카운트)
    - appearance를 이용해서 disticnt여부 식별해주고, back을 땡길때마다 다시 갱신해줌
 

@@ -8,7 +8,7 @@
     https://app.codility.com/programmers/lessons/8-leader/equi_leader/
 
 *주의할점
-  - 전체에 대해 먼저 counting
+  - 전체에 대해 먼저 counting해서 right를 만듬
   - 문자 하나씩 돌면서 left를 만들고 (누적으로), 그만큼 전체에서 빼줌 (right)
   - left의 leader 추출
     *매번 left의 루프는 다시 갱신하지말고, 이전 max값 확인하는 방식으로 업데이트
@@ -32,19 +32,23 @@ def solution(A):
     sub_leader_cnt = 0
     sub_leader = ''
     for i in A:
+        # 전체(right)에서 차감하는 부분
         total_cnt[i]-=1
         total_n-=1
 
+        # left를 만드는 부분
         if i in sub_cnt:
             sub_cnt[i]+=1
         else:
             sub_cnt[i]=1
         sub_n+=1
-        
+
+        # left의 leader 계산 및 갱신
         if sub_cnt[i] > sub_leader_cnt:
             sub_leader=i
             sub_leader_cnt=sub_cnt[i]
         
+        # left의 leader에 해당하는 right도 leader가 되면 카운팅                
         if sub_leader_cnt > sub_n/2 and total_cnt[sub_leader] > total_n/2:
             result += 1
     return result

@@ -5,7 +5,7 @@
 - type: Prefix Sums
 - level: Medium
 - Problem : 
-    https://app.codility.com/programmers/lessons/5-prefix_sums/passing_cars/
+    https://app.codility.com/programmers/lessons/5-prefix_sums/count_div/
 
 *주의할점
   - 두번째로 성공
@@ -16,7 +16,7 @@
   Reference 참고 
   - 비슷한 방식의 접근인데, 배수의 개수를 구할때 range로 굳이 안해도 되고
   - 배수의 개수는  "몫"을 통해 간단히 계산 가능
-  - 시작점 (A)이 나누어 떨어질 경우가 (-) 연산으로 빠지니까 +1을 해주어야함
+  - 시작점 (A)이 나누어 떨어질 경우가 (-) 연산 아에 빠져버리니까 +1을 해주어야함
       * 이 경우로 0을 나누는 경우도 포함됨 (따로 생각할 필요 없음)
   
 *Referece

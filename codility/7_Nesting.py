@@ -5,10 +5,10 @@
 - type: Stacks and Queues
 - level: Easy
 - Problem : 
-    https://app.codility.com/programmers/lessons/7-stacks_and_queues/fish/
+    https://app.codility.com/programmers/lessons/7-stacks_and_queues/nesting/
 
 *주의할점
-   - 비어있을떄는 1로 예외처리해야함 .. 명시 좀 해주세요
+   - 비어있을떄는 1로 예외처리해야함 (조건 잘 읽자)
    Reference
      - 원래는 stack 문제이므로, stack(FILO)을 이용
      - "("일떄만 stack에 append 하고, ")"를 만나면 pop 해주는 방식

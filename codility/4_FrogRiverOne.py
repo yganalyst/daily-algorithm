@@ -24,11 +24,11 @@ https://wayhome25.github.io/algorithm/2017/05/30/FrogRiverOne/
 def solution(X, A):
     check=set()
     for i,v in enumerate(A):
-        if v>=1 and v<=X:
-            check.add(v)
+        check.add(v)
         if len(check)==X:
             return i
     return -1
+
 
 # 2. 내 답 (퍼포먼스 탈락) O(N ** 2)
 def solution(X, A):
