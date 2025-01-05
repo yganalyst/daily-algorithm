@@ -23,5 +23,14 @@ def solution(A):
             return 0
     return 1
 
-
+# 2. 내 답(20250105)
+def solution(A):
+    n=len(A)
+    un = len(set(A))
+    if n!=un:
+        return 0
+    A.sort()
+    if A[-1]==n:
+        return 1
+    return 0
 

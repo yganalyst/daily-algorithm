@@ -32,3 +32,16 @@ def solution(A):
     if answer > 1000000000:
         return -1
     return answer
+
+# 2. 내 답(20250105)
+def solution(A):
+    result=0
+    cum_sum=0
+    for i in A:
+        if i==0:
+            cum_sum+=1
+        else:
+            result += cum_sum
+        if result>1000000000:
+            return -1
+    return result
