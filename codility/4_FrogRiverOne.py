@@ -52,5 +52,12 @@ def solution(X, A):
                 return i
     return -1
 
-
+# 4. 내 답 (20250105)
+def solution(X, A):
+    _ls = set()
+    for i in range(len(A)):
+        _ls.add(A[i])
+        if len(_ls)==X:
+            return i
+    return -1
 
