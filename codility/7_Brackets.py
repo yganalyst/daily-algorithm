@@ -18,8 +18,8 @@
 
 *Referece
 
-
 """
+
 # 1. 내 답 (100%)
 def solution(S):
 
@@ -37,6 +37,21 @@ def solution(S):
             return 0
 
     if close_ls:
+        return 0
+    return 1
+
+# 2. 내 답 (20250106) - 100%이지만 효율성은 60%
+def solution(S):
+    while True:
+        if "()" in S:
+            S = S.replace("()","")
+        elif "{}" in S:
+            S = S.replace("{}","")
+        elif "[]" in S:
+            S = S.replace("[]","")
+        else:
+            break
+    if S:
         return 0
     return 1
 
